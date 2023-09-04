@@ -1,3 +1,4 @@
+/* general page styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* body styling */
 body{
     background: #e3edf7;
     height: 100vh;
@@ -13,6 +15,7 @@ body{
     justify-content: center;
 }
 
+/* skill class styling */
 .skill{
     width: 160px;
     height: 160px;
@@ -20,6 +23,7 @@ body{
     position: relative;
 }
 
+/* outer progress bar styling */
 .outer{
     height: 160px;
     width: 160px;
@@ -30,6 +34,7 @@ body{
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 6px 6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
+/* inner progress bar styling */
 .inner{
     height: 120px;
     width: 120px;
@@ -47,29 +52,35 @@ body{
     ;
 }
 
+/* id number element styling to increment */
 #number{
     font-weight: 600;
     color: #555;
 }
 
+/* svg circle property / element styling */
+/* changed this to complete the circle */
 circle{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
-    stroke-dasharray: 472;
+    /* these values determine extent bar covers circle */
+    stroke-dasharray: 672;
     /* used to animate */
-    stroke-dashoffset: 472;
+    /* animates circle */
+    stroke-dashoffset: 672;
     /* variable name - length of time - type */
-    animation: anim 2s linear forwards;
+    animation: anim 4s linear forwards;
 }
 
+/* svg styling */
 svg{
     position: absolute;
     top: 0;
     left: 0;
 }
 
-
+/* create keyframes to increment svg image and provide indication of progress */
 @keyframes anim{
     100%{
         stroke-dashoffset: 165.2;
