@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <!-- create a progress bar -->
+    <!-- percentage increase with circular animation -->
+
+    <!-- create skil division -->
+    <div class="skill">
+        <!-- create outer division -->
+        <div class="outer">
+            <!-- create inner division -->
+            <div class="inner">
+                <!-- populate inner division with a number -->
+                <div id="number">
+                </div>
+            </div>
+        </div>
+        <!-- populate with an svg image which provides our circulatr progress image -->
+        <!-- we can edit this to rotate as if progress is being made -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <!-- js -->
+    <script>
+        // grab our number element id
+        let number = document.getElementById("number");
+        // create a counter
+        let counter = 0;
+        // create a setInterval function
+        setInterval(() => {
+            // if counter is equal to 65
+            if(counter == 65){
+                // clear interval to begin again
+                clearInterval();
+            } else {
+                // else add to counter every interval
+                counter += 1;
+                // populate our number element id with counter value and %
+                number.innerHTML = counter + "%";
+            }
+            // set interval to increment by to match progress bar development
+        }, 29)
+    </script>
+    
+</body>
+</html>
